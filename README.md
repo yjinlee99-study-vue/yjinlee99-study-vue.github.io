@@ -1,29 +1,34 @@
 # yjinlee99-study-vue.github.io
 
-This template should help get you started developing with Vue 3 in Vite.
+![image](https://github.com/yjinlee99-study-vue/yjinlee99-study-vue.github.io/assets/73848116/8f83f685-6285-4e13-9b94-edc7acc00bcf)
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### How to Contribute
+- WSL Ubuntu 22.04 LTS
+- vim
+- vue
 
-## Customize configuration
+### How to Deploy
+|STG|BRANCH|TRIGGER|URL|
+|------|---|---|---|
+|DEV|Branch of PR|manual firebase cmd*|[yjinlee99-study-vue.web.app]([https://yjin-1f35c.web.app](https://yjinlee99-study-vue.web.app/))|
+|PRD|main|Auto Github Action|[yjinlee99.github.io]([yjinlee99-study-vue.github.io](https://yjinlee99-study-vue.github.io/))|
+```bash
+ bbang@DESKTOP-MSRKHJ6  ~/code/yjinlee99-study-vue.github.io   0.1.0/dist2docs ±  firebase deploy
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+=== Deploying to 'yjinlee99-study-vue'...
 
-## Project Setup
+i  deploying hosting
+i  hosting[yjinlee99-study-vue]: beginning deploy...
+i  hosting[yjinlee99-study-vue]: found 4 files in docs
+✔  hosting[yjinlee99-study-vue]: file upload complete
+i  hosting[yjinlee99-study-vue]: finalizing version...
+✔  hosting[yjinlee99-study-vue]: version finalized
+i  hosting[yjinlee99-study-vue]: releasing new version...
+✔  hosting[yjinlee99-study-vue]: release complete
 
-```sh
-npm install
-```
+✔  Deploy complete!
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+Project Console: https://console.firebase.google.com/project/yjinlee99-study-vue/overview
+Hosting URL: https://yjinlee99-study-vue.web.app
 ```
