@@ -1,21 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const count = ref({
-	cnt: 0,
-	name: "HELLO"
-})
-
-function increment() {
-	count.value.cnt = count.value.cnt + 1
-	count.value.name = count.value.name.split('').reverse().join('')
-}
-
-onMounted(()=> {
-	console.log(`initial count is ${count.value}.`)
-})
+import { ref } from 'vue'
+const message = ref({name:"YJIN", age:26})
+const name = "영진"
 </script>
 
 <template>
-	<button @click="increment">Count is: {{ count.cnt }} {{ count.name }}</button>
+	<h1>{{ message }}</h1>
 </template>
