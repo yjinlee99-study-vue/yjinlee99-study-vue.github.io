@@ -1,0 +1,12 @@
+{
+  "hosting": {
+
+    "public": "docs",
+    "site": "yjinlee99-study-vue",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
