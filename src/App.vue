@@ -1,25 +1,29 @@
-<script>
-import champion from "@/assets/champion.json"
-
-const champions = champion;
-
-export default {
-  data() {
-    return {
-     	champions,
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue'
+let id = 0
+const newTodo = ref('')
+const todos = ref([
+	{ id: id++, issue: 'Backlog' }, { id: id++, issue: 'Todo' },
+	{ id: id++, issue: 'Going Hawaii' }
+])
+function addTodo() {
+	todos.value.push({id: id++, issue: newTodo.value})
+	newTodo.value = ''
+}
+const removeTodo = (todo) => {
+    todos.value = todos.value.filter(item => item.id !== todo.id)
+}
 </script>
 
 <template>
-  <div>
-  	<ul v-for="c in champions.data">
-      <li v-if="c.name.includes('리')" >
-	<p>{{ c.name }}</p>
-	<p>{{c.title}} <br> {{c.blurb}}</p>
-	<span>공격력: {{ c.info.attack }}   방어력: {{ c.info.defense }}   주문력: {{ c.info.magic }}   포지션: {{ c.tags }} </span><br><br>
-      </li>
-    </ul>
-  </div>
+	<form @submit.prevent="addTodo">
+	<input v-model="newTodo">
+	<button>할 일 추가</button>
+	</form>
+
+	<ul>
+		<li v-for="todo in todos">
+			{{ todo.issue }} - <button @click="removeTodo(todo)">Done</button>
+		</li>
+	</ul>
 </template>
